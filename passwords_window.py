@@ -1,5 +1,5 @@
 from PyQt5.QtWidgets import QWidget, QLabel, QLineEdit, QPushButton, QVBoxLayout, QMessageBox
-
+#This module is in development, passwords must be encyrpted before storing and decrypted when application is loaded, user will be prompted for password 
 class PasswordWindow(QWidget):
     def __init__(self):
         super().__init__()
@@ -37,6 +37,7 @@ class PasswordWindow(QWidget):
 
     def save_to_file(self, password):
         # For example, you can save the password to a text file
+        #TODO encrypt passwords before saving using homemade alg fn
         with open("password.txt", "w") as file:
             file.write(password)
 
